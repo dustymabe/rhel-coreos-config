@@ -22,7 +22,6 @@ packages:
   - perl-NDBM_File
   - polkit-pkla-compat
   - python-unversioned-command
-  - redhat-release-eula
   - rpm-plugin-systemd-inhibit
 
 # The azure-vm-utils package provides these udev rules, but it wont be added
