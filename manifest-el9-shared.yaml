@@ -13,7 +13,6 @@ packages:
   # `exclude-packages`.
   # https://github.com/coreos/rhel-coreos-config/issues/119#issuecomment-3642292482
   - adcli
-  - fwupd-plugin-flashrom
   - gawk-all-langpacks
   - geolite2-city
   - geolite2-country
@@ -23,6 +22,14 @@ packages:
   - polkit-pkla-compat
   - python-unversioned-command
   - rpm-plugin-systemd-inhibit
+
+# Couldn't include fwupd-plugin-flashrom above because s390x
+# doesn't have that package.
+conditional-include:
+  - if: basearch != "s390x"
+    include:
+      packages:
+        - fwupd-plugin-flashrom
 
 # The azure-vm-utils package provides these udev rules, but it wont be added
 # until EL10[1]. This can be dropped when moving to EL10, provided the
