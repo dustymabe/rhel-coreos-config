@@ -13,7 +13,7 @@ packages-x86_64:
 
 packages-aarch64:
   # Needed for NVIDIA Bluefield platforms to configure firmware settings during bootstrap,
-  # so that networking can be enabled. NVIDIA Bluefield if limited to aarch64 for now so
+  # so that networking can be enabled. NVIDIA Bluefield is limited to aarch64 for now so
   # limit install of this package to aarch64.
   # See: https://issues.redhat.com/browse/COS-3934
   - mstflint
