@@ -10,7 +10,8 @@ rootfs-args: ""
 composefs: false
 
 # Additional default kernel arguments injected into disk images
-extra-kargs: []
+extra-kargs:
+  - initcall_blacklist=algif_aead_init
 
 # Can also be oci-chunked
 ostree-format: oci-chunked-v1
